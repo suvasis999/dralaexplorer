@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors =require('cors');
 var debug = require('debug')('rdexplorer:server');
 var http = require('http');
+const bodyPraser=require('body-parser');
 
 var indexRouter = require('./routes/index');
 //var usersRouter = require('./routes/users');
@@ -22,6 +23,7 @@ app.set('port', port);
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
+app.use(bodyPraser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
