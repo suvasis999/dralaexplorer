@@ -29,7 +29,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/test',function (req,res) {
-        console.info('test);
+        console.log('test');
 return res.status(200).json({
   success : true})
         })
