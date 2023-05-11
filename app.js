@@ -16,7 +16,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-var port = normalizePort(process.env.PORT || '3002');
+// var port = normalizePort(process.env.PORT || '3002');
+var port = '3002'
 
 app.set('port', port);
 
