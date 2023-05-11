@@ -27,7 +27,7 @@ app.use(express.json())
 app.use(bodyPraser.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
-app.use(express.static(path.join(__dirname, 'public')))
+// app.use(express.static(path.join(__dirname, 'public')))
 app.get('/test', function (req, res) {
   console.log('test')
   return res.status(200).json({
