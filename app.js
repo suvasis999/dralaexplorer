@@ -27,7 +27,11 @@ app.use(bodyPraser.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.get('/test',(req,res){
+        console.info('test);
+return res.status(200).json({
+  success : true})
+        })
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 
